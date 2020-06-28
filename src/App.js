@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route, Switch} from 'react-router';
+import {BrowserRouter as Router, Link, NavLink} from 'react-router-dom';
+import Wrapper from './components/Hoc/Wrapper';
+import Hooks from './components/Hooks';
 import './App.css';
-
-function App() {
+import Flexbox from './components/Flexbox';
+const App =()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Router>
+        <main className="main__wrapper">
+          <aside className="left__sidebar">
+              <ul className="sidebar__item">
+                  <li><NavLink to="/">Hooks</NavLink></li>
+                  <li><NavLink to="/flexbox">CSS flexbox</NavLink></li>
+              </ul>
+          </aside>
+          <section className="right__wrapper">
+              <Switch>
+                  <Route exact path="/" component={()=><Hooks/>}/>
+                  <Route path="/flexbox" component={()=><Flexbox/>}/>
+              </Switch>
+          </section>
+      </main>
+      </Router>
+    </Wrapper>
   );
 }
-
 export default App;

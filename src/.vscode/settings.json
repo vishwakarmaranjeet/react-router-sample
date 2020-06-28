@@ -1,0 +1,7 @@
+{
+    "sonarlint.analyzerProperties": {
+        "serverId": "1e0ea6e11e4640a79b1a0fc063df733827d61f28",
+        "projectKey": "jppl-headerfooter"
+    },
+    "sonarlint.ls.javaHome": "C:\\\\Program Files\\\\Java\\\\jre1.8.0_231"
+}
