@@ -125,3 +125,11 @@ input, button, textarea{
   background-color: #fff;
   box-shadow:5px 5px 8px rgba(0, 0, 0, 0.10);
 }
+.user-avatar{
+  width: 130px;
+  height: 130px;
+  padding-bottom: 10px;
+}
+.user-avatar > img{
+  border-radius: 50%;
+}

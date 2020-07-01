@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import Wrapper from './Hoc/Wrapper';
 const Hooks =()=> {
     //const [StudentTile] = useState('This is student component...');
-  const [PersonTitle] = useState('This is person component...');
   const [counter, setCounter] = useState(0);
   const [student, setStudent] = useState(['Ram','Shyam','Vinit', 'Harish']);
   const [screenWidth, setScreenWidth] = useState([window.innerWidth]);

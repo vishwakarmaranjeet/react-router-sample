@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router';
-import {BrowserRouter as Router, Link, NavLink} from 'react-router-dom';
+import {BrowserRouter as Router, NavLink} from 'react-router-dom';
 import Wrapper from './components/Hoc/Wrapper';
 import Hooks from './components/Hooks';
 import './App.css';
