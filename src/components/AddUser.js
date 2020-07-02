@@ -1,36 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Wrapper from './Hoc/Wrapper';
-const Hooks =()=> {
-    //const [StudentTile] = useState('This is student component...');
-  const [counter, setCounter] = useState(0);
-  const [student, setStudent] = useState(['Ram','Shyam','Vinit', 'Harish']);
-  const [screenWidth, setScreenWidth] = useState([window.innerWidth]);
-
-  // get screen size 
-  useEffect(()=>{
-    const handleResize =()=>{
-      setScreenWidth(window.innerWidth)
-    }
-      window.addEventListener('resize', handleResize);
-    return ()=> {
-      window.removeEventListener('resize', handleResize);
-    }
-  },[]);
-  
-  // Increment handler
-  const incremenetHandler =()=>{
-    setCounter(
-      counter + 1,
-      //student.push([generateName()])
-    );
-  }
-  // Decrement handler
-  let decrementHandler = ()=>{
-    setCounter(
-      counter - 1,
-      //student.splice(-1, 1)
-    );
-  }
+const AddUser =()=> {
+  const [user, setUser] = useState(['Ram','Shyam','Vinit', 'Harish']);
   // Random name generate 
   const capFirst=(string)=> {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -46,31 +17,28 @@ const Hooks =()=> {
   }
   // Add user function handler
   const addUserHandler =()=>{
-    setStudent(
-      [...student,generateName()]
+    setUser(
+      [...user,generateName()]
     )
   }
   // Remove user function handler
   const removeUserHandler =()=>{
-    setStudent(
-     student.slice(0, -1)
+    setUser(
+     user.slice(0, -1)
     )
   }
-  console.log(`[App.js] Screen width ${screenWidth}`);
 
   return(
     <Wrapper>
-        {screenWidth <=768 ? <h4>Mobile</h4> : <h4>Desktop</h4>}
-        <p>Cliked Count : {counter}</p>
-        <button onClick={incremenetHandler} className="add-button">+</button>
-        <button onClick={decrementHandler} className="remove-button">-</button>
-        <p>Counting Student Length : {student.length}</p>
-        {student.map((item, index)=>
-            <p key={index}>{item}</p>
-        )}
+        <h3>Counting Student Length : {user.length}</h3>
+        <ul>
+            {user.map((user, index)=>
+                <li key={index}>{user}</li>
+            )}
+        </ul>
         <button onClick={addUserHandler} className="add-button">Add User</button>
         <button onClick={removeUserHandler} className="remove-button">Remove User</button>
     </Wrapper>
   );
 }
-export default Hooks;
+export default AddUser;

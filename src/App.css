@@ -121,9 +121,10 @@ input, button, textarea{
   width: 27.333%;
   margin:15px;
   padding: 15px;
-  border:1px solid #eee;
+  border:1px solid #f1f2f6;
   background-color: #fff;
   box-shadow:5px 5px 8px rgba(0, 0, 0, 0.10);
+
 }
 .user-avatar{
   width: 130px;
@@ -132,4 +133,7 @@ input, button, textarea{
 }
 .user-avatar > img{
   border-radius: 50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  box-shadow: 0 0px 5px #948f8f;
 }
