@@ -7,6 +7,7 @@ import ApiCalls from './components/ApiCalls';
 import Counter from './components/Counter';
 import AddUser from './components/AddUser';
 import EventListener from './components/EventListener';
+import ClassComponent from './components/ClassComponent';
 import './App.css';
 const App =()=> {
   return (
@@ -20,6 +21,7 @@ const App =()=> {
                   <li><NavLink to="/apicalls">API Calls</NavLink></li>
                   <li><NavLink to="/adduser">Add User</NavLink></li>
                   <li><NavLink to="/eventListener">Event Listener</NavLink></li>
+                  <li><NavLink to="/classcomponent">Class Component</NavLink></li>
               </ul>
           </aside>
           <section className="right__wrapper">
@@ -29,6 +31,7 @@ const App =()=> {
                   <Route path="/Counter" component={()=><Counter/>}/>
                   <Route path="/AddUser" component={()=><AddUser/>}/>
                   <Route path="/EventListener" component={()=><EventListener/>}/>
+                  <Route path="/ClassComponent" component={()=><ClassComponent/>}/>
               </Switch>
           </section>
       </main>

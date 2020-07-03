@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Wrapper from './Hoc/Wrapper';
 const AddUser =()=> {
   const [user, setUser] = useState(['Ram','Shyam','Vinit', 'Harish']);
