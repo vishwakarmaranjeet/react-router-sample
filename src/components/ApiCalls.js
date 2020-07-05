@@ -27,7 +27,7 @@ const [userData, setUserData] = useState([]);
                             <div className="user-avatar">
                                 <img src={`${item.avatar}`} alt={item.first_name}/>
                             </div>
-                            <p>{`${item.first_name} ${item.last_name}`}</p>
+                            <p className="user-name">{`${item.first_name} ${item.last_name}`}</p>
                             <p>{item.email}</p>
                         </div>
                     ))
