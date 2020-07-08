@@ -11,6 +11,14 @@ const getSampleUserData = () => {
         .catch(error => reject(error));
     });
 }
+// Get User band data
+const getUserBandData = () => {
+    return new Promise((resolve, reject) => {
+        axios.get('../userband.json')
+        .then(res => resolve(res.data))
+        .catch(error => reject(error));
+    });
+}
 
 // Function for number format
 function formatNumber(num) {
@@ -88,5 +96,6 @@ const service = {
     getFullMonthName,
     dateWithoutSlash,
     checkActiveUrl,
+    getUserBandData,
 }
 export default service;
